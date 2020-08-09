@@ -350,7 +350,7 @@ class Swiper extends Component {
 
   resetTopCard = cb => {
     Animated.spring(this.state.pan, {
-			useNativeDriver: false,
+			useNativeDriver: true,
       toValue: 0,
       friction: this.props.topCardResetAnimationFriction,
       tension: this.props.topCardResetAnimationTension
@@ -421,7 +421,7 @@ class Swiper extends Component {
     this.setState({ panResponderLocked: true })
     this.animateStack()
     Animated.timing(this.state.pan, {
-			useNativeDriver: false,
+			useNativeDriver: true,
       toValue: {
         x: x * SWIPE_MULTIPLY_FACTOR,
         y: y * SWIPE_MULTIPLY_FACTOR
